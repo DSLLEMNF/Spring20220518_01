@@ -20,7 +20,12 @@ public class PeopleService {
         peoplerepository.save1(peopleDTO);
     }
 
-    public void save2(PeopleDTO peopleDTO) {
-        peoplerepository.save2(peopleDTO);
+    public boolean save2(PeopleDTO peopleDTO) {
+        int saveResult = peoplerepository.save2(peopleDTO);
+        if(saveResult > 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

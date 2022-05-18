@@ -40,8 +40,15 @@ public class PeopleController {
 
     @PostMapping("/save2")
     public String save2(@ModelAttribute PeopleDTO peopleDTO) {
-        peopelservice.save2(peopleDTO);
-        return null;
+        System.out.println("peopleDTO = " + peopleDTO);
+        boolean saveResult = peopelservice.save2(peopleDTO);
+        if(saveResult){
+            System.out.println("저장성공");
+            return "index";
+        }else{
+            System.out.println("저장실패");
+            return "save-fail";
+        }
     }
 }
 

@@ -20,7 +20,7 @@ public class PeopleRepository {
         sql.insert("Peaple.save",peopleDTO);
     }
 
-    public void save2(PeopleDTO peopleDTO) {
-        sql.insert("People.sav",peopleDTO);
+    public int save2(PeopleDTO peopleDTO) {
+        return sql.insert("People.sav",peopleDTO);
     }
 }

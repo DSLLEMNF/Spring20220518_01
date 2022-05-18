@@ -13,5 +13,9 @@
 </head>
 <body>
     <h2>List.jsp</h2>
+    <c:forEach var="people" items="${peopleList}">
+        ${people.name1}
+        ${people.age1}<br>
+    </c:forEach>
 </body>
 </html>

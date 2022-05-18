@@ -7,4 +7,7 @@
     <insert id="save" parameterType="people">
         insert into test2_table(name1, age1) values(#{name1},#{age1})
     </insert>
+    <select id="findAll" resultType="people">
+        select * from test2_table
+    </select>
 </mapper>
